@@ -20,12 +20,14 @@ export class PaginationArgs {
 @InputType()
 export class NewDeviceArgs {
   @Field()
+  id : number;
+
+  @Field()
   @MaxLength(30)
   name: string;
 
-  @Field({ nullable: true })
-  @IsOptional()
-  @Length(30, 255)
+  @Field()
+  @Length(10, 255)
   model: string;
 
 }

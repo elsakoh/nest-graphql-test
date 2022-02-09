@@ -1,0 +1,30 @@
+type Query {
+    devices: [Device]
+    device(id:ID!): [Device]
+}
+
+type Mutation {
+  createDevice(createDeviceArgs: CreateDeviceArgs): Device
+  removeDevice(id: Int!): Boolean
+}
+
+
+type Device {
+  id: Int!
+  name: String!
+  model: String!
+  owner: Organisation
+}
+
+type Organisation { 
+    name: String!
+    devices: [Device]
+}
+"""
+Test comment
+"""
+input CreateDeviceArgs {
+  id: Int!
+  name: String!
+  model: String!
+}

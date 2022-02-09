@@ -5,13 +5,10 @@ import { DevicesModule } from './devices/module';
 @Module({
   imports: [
     DevicesModule,
-    GraphQLModule.forRoot(
-      {
-        debug: false,
-        playground: true,
-        autoSchemaFile: true,
-      }
-    ),
+    GraphQLModule.forRoot({
+      playground: true,
+      typePaths: ['./**/*.graphql'],
+    }),
   ],
 })
 export class AppModule {}
