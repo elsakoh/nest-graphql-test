@@ -2,7 +2,7 @@ import { NotFoundException } from '@nestjs/common';
 import { Args, Mutation, Query, Resolver, Subscription } from '@nestjs/graphql';
 import { PubSub } from 'graphql-subscriptions';
 import { PaginationArgs, NewDeviceArgs } from '../dto/device';
-import { Device } from '../models/device';
+import { Device } from '../models/device.model';
 import { DevicesService } from './service';
 
 const pubSub = new PubSub();

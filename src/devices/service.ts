@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 // import { NewRecipeInput } from './dto/new-recipe.input';
 import { PaginationArgs, NewDeviceArgs } from '../dto/device';
-import { Device } from '../models/device';
+import { Device } from '../models/device.model';
 
 @Injectable()
 export class DevicesService {

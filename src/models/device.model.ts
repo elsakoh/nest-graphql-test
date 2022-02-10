@@ -14,19 +14,14 @@ export class LatLng{
 
 @ObjectType({ description: 'device' })
 export class Device {
-  @Field(type => ID)
   id: string;
 
-  @Field()
   name: string;
 
-  @Field()
-  model: string;
+  model?: string;
 
-  @Field()
   creationDate: Date;
 
-  @Field()
   latlng: LatLng;
 }
 
